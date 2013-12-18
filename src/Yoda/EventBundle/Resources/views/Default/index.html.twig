@@ -1,1 +1,13 @@
-Hello <strong>{{ name }}</strong>!
+{% extends '::base.html.twig' %}
+
+{% block title 'Some Twiggy Goodness' %}
+
+{% block body %}
+    
+    {{ event.name }}<br/>
+    {{ event.location }}<br/>
+
+    {% for i in 1..count %}
+        Hello <strong>{{ name }}</strong> # {{ i }}!<br/>
+    {% endfor %}
+{% endblock %}
